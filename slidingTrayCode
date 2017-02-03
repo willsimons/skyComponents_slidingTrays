@@ -1,0 +1,96 @@
+# Sliding category menu and item trays
+
+header = new Layer
+	x:0, y:0, width:750, height:120, image:"images/phase3a_android_trays_header_1.0.png"
+	
+scrollArea = new ScrollComponent
+	y:115
+	width:Screen.width
+	height:Screen.height
+	backgroundColor:'#FFF'
+# Only vertical scrolling is allowed and the direction is locked
+scrollArea.scrollHorizontal = false
+# The direction lock is enabled to only allow either horizontal or vertical scrolling
+directionLock:true
+
+feed = new Layer
+	width:Screen.width
+	height: 2354
+	image: "images/phase3a_android_trays_mainview2_1.0.png"
+feed.superLayer = scrollArea.content
+scrollArea.sendToBack()
+
+# Variable which will hold all of the trays
+scrollViewTrays = []
+
+navigationBar = new ScrollComponent
+	y:121
+	width:750
+	height:144
+navigationBar.scrollVertical = false
+
+feed = new Layer
+	width:1544
+	height:144
+	image:"images/phase3a_android_trays_navbar_1.0.png"
+feed.superLayer = navigationBar.content
+
+tray1 = new ScrollComponent
+	y:250
+	width:750
+	height:397
+# Only vertical scrolling is allowed and the direction is locked
+tray1.scrollVertical = false
+directionLock:true
+tray1.superLayer = scrollArea.content
+
+feed = new Layer
+	width:1844
+	height:397
+	image:"images/phase3a_android_trays_tray_1.0.png"
+feed.superLayer = tray1.content
+
+tray2 = new ScrollComponent
+	y:762
+	width:750
+	height:397
+# Only vertical scrolling is allowed and the direction is locked
+tray2.scrollVertical = false
+directionLock:true
+tray2.superLayer = scrollArea.content
+
+feed = new Layer
+	width:1844
+	height:397
+	image:"images/phase3a_android_trays_tray_1.0.png"
+feed.superLayer = tray2.content
+
+tray3 = new ScrollComponent
+	y:1269
+	width:750
+	height:397
+# Only vertical scrolling is allowed and the direction is locked
+tray3.scrollVertical = false
+directionLock:true
+tray3.superLayer = scrollArea.content
+
+feed = new Layer
+	width:1844
+	height:397
+	image:"images/phase3a_android_trays_tray_1.0.png"
+feed.superLayer = tray3.content
+	
+tray4 = new ScrollComponent
+	y:1777	
+	width:750
+	height:397
+# Only vertical scrolling is allowed and the direction is locked
+tray4.scrollVertical = false
+directionLock:true
+tray4.superLayer = scrollArea.content
+
+feed = new Layer
+	width:1844
+	height:397
+	image:"images/phase3a_android_trays_seeall_1.0.png"
+feed.superLayer = tray4.content
